@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cadastro de Pessoa Física</h1>
+    Nome: <input type="text" name="nome" id="nome"> <br>
+    Telefone: <input type="tel" name="telefone" id="telefone"><br>
+    E-mail: <input type="email" name="email" id="email"><br>
+    Data: <input type="date" name="data" id="data"> <br>
+    País: <input type="text" name="país" id="país">
+    <input type="button" value="Enviar" onclick="cadastrar()">
+    <div id='cad'></div>
+    
+    <script>
+        function cadastrar (){
+            
+            var nom = document.querySelector('input#nome').value
+            var tel = document.querySelector('input#telefone').value
+            var ema = document.querySelector('input#email').value
+            var dat = document.querySelector('input#data').value
+            var pai = document.querySelector('input#país').value
+            var nacional = 'Brasileiro'
+
+            if (pai == 'brasil' || pai == 'Brasil') {
+                nacional = 'Brasileiro (a)'
+            } else {
+                nacional = 'Estrangeiro'
+            }
+       
+        cad.innerHTML = `<p>O senhor <strong>${nom}</strong> cadastrado no E-mail <strong>${ema}</strong> portador do telefone <strong>${tel}</strong> da nacionalidade <strong>${nacional}</strong> assume hoje, dia <strong>${dat}</strong> a responsabilidade por assistir todo o módulo de JavaScrip do Curso em Vídeo.</p>`
+         }
+    </script>
+</body>
+</html>

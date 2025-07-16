@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Voto</title>
+</head>
+<body>
+  <h1>Verificar Voto</h1>  
+  <input type="number" name="idade" id="idade" placeholder="Digite sua idade">
+  <button onclick="buttonEnviar()">Enviar</button>
+  <div id="res">
+
+  </div>
+  <script>
+    function buttonEnviar() {
+        var idade = document.querySelector('#idade').value
+        var res = document.querySelector('#res')
+        res.innerHTML = `<p>Você tem ${idade} anos de idade.</p>`
+        if (idade < 16 || idade > 65) {
+            res.innerHTML += '<p>Você não vota!</p>' 
+            
+        } else { 
+            res.innerHTML += '<p>Você vota!</p> '
+            
+        }
+
+        
+    }
+  </script>
+ 
+</body>
+</html>
